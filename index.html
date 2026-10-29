@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed Saad, software engineer</title>
+<meta name="description" content="Ahmed Saad is a Cairo-based software engineer building Flutter and full-stack products: DineOut, Little Steps and El7a2ny.">
+<meta property="og:title" content="Ahmed Saad, software engineer">
+<meta property="og:description" content="Flutter and full-stack engineer in Cairo. Pharmacist first, now building software for the people on the other side of the counter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&family=IBM+Plex+Sans+Arabic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F6F5;
+  --surface:#FFFFFF;
+  --ink:#14233A;
+  --muted:#566273;
+  --rule:#D6DCD9;
+  --green:#0B7A57;
+  --green-wash:#DCEFE6;
+  --green-ink:#075C41;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1715;
+    --surface:#15211E;
+    --ink:#E6ECEA;
+    --muted:#9AA8A4;
+    --rule:#26332F;
+    --green:#3FBF8E;
+    --green-wash:#163A2D;
+    --green-ink:#7FDBB5;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1715;--surface:#15211E;--ink:#E6ECEA;--muted:#9AA8A4;--rule:#26332F;
+  --green:#3FBF8E;--green-wash:#163A2D;--green-ink:#7FDBB5;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:1.0625rem;line-height:1.6;
+}
+a{color:var(--green-ink);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:2px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+img{max-width:100%}
+
+/* Hero */
+.hero{padding:clamp(3.5rem,9vw,7rem) 0 clamp(3rem,7vw,5rem);border-bottom:1px solid var(--rule)}
+.names{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1.5rem;margin:0}
+.name-en{font-size:clamp(3.2rem,11vw,7.5rem);font-weight:800;letter-spacing:-.035em;line-height:.95}
+.name-ar{font-family:"IBM Plex Sans Arabic","Geeza Pro","Segoe UI",Tahoma,sans-serif;font-weight:700;
+  font-size:clamp(2.2rem,7vw,4.8rem);color:var(--green);line-height:1.1}
+.role{font-size:clamp(1.15rem,2.4vw,1.45rem);font-weight:500;margin:1.75rem 0 0;max-width:38rem}
+.intro{color:var(--muted);max-width:38rem;margin:1rem 0 0}
+.links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem;padding:0;list-style:none}
+.links a{display:inline-block;padding:.6rem 1.1rem;border:1px solid var(--rule);border-radius:999px;
+  color:var(--ink);text-decoration:none;font-weight:500;background:var(--surface)}
+.links a:hover{border-color:var(--green)}
+.links a.primary{background:var(--green);border-color:var(--green);color:#fff}
+:root[data-theme="dark"] .links a.primary{color:#06231A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .links a.primary{color:#06231A}}
+.where{margin-top:1.25rem;color:var(--muted);font-size:.95rem}
+
+/* Sections */
+section{padding:clamp(3rem,7vw,5rem) 0;border-bottom:1px solid var(--rule)}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);letter-spacing:-.02em;line-height:1.15;margin:0 0 .5rem}
+.lede{color:var(--muted);margin:0 0 2.5rem;max-width:40rem}
+
+/* Projects */
+.project{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:1rem 3rem;
+  padding:2.25rem 0;border-top:1px solid var(--rule)}
+.project:first-of-type{border-top:0;padding-top:0}
+.project h3{font-size:1.6rem;letter-spacing:-.02em;margin:0;line-height:1.15}
+.kind{color:var(--muted);margin:.35rem 0 0;font-size:.95rem}
+.status{display:inline-block;margin-top:.9rem;padding:.2rem .7rem;border-radius:999px;font-size:.85rem;
+  font-weight:500;background:var(--green-wash);color:var(--green-ink)}
+.project p{margin:0 0 1rem;max-width:40rem}
+.project ul{margin:0 0 1.25rem;padding-left:1.15rem;max-width:40rem}
+.project li{margin:.35rem 0}
+.project li::marker{color:var(--green)}
+.stack{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0 0 1rem;list-style:none}
+.stack li{margin:0;padding:.15rem .6rem;border:1px solid var(--rule);border-radius:4px;font-size:.85rem;color:var(--muted)}
+.plinks{display:flex;gap:1.25rem;flex-wrap:wrap;font-weight:500}
+
+.more-title{margin:3rem 0 0;font-size:1.25rem}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem 2.5rem;margin-top:1rem}
+.more h3{font-size:1.1rem;margin:0 0 .3rem}
+.more p{margin:0 0 .5rem;color:var(--muted);font-size:.97rem}
+
+/* Experience */
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:.25rem 3rem;padding:1.5rem 0;border-top:1px solid var(--rule)}
+.timeline li:first-child{border-top:0;padding-top:0}
+.when{color:var(--muted);font-size:.95rem;padding-top:.15rem}
+.timeline h3{font-size:1.15rem;margin:0}
+.timeline .org{color:var(--muted);margin:.1rem 0 .5rem}
+.timeline p{margin:0;max-width:40rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem 2.5rem}
+.skills h3{font-size:1rem;margin:0 0 .4rem}
+.skills p{margin:0;color:var(--muted)}
+
+footer{padding:clamp(3rem,7vw,5rem) 0 4rem}
+footer h2{max-width:30rem}
+footer p{color:var(--muted);max-width:36rem}
+
+@media (max-width:44rem){
+  .project,.timeline li{grid-template-columns:1fr}
+  .project{gap:.75rem}
+}
+
+/* One page-load moment: the names */
+@media (prefers-reduced-motion:no-preference){
+  .name-en,.name-ar{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .name-ar{animation-delay:.18s}
+  @keyframes rise{from{opacity:0;transform:translateY(.25em)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="names">
+        <span class="name-en">Ahmed Saad</span>
+        <span class="name-ar" lang="ar" dir="rtl">أحمد سعد</span>
+      </h1>
+      <p class="role">Software engineer building Flutter and full-stack products for real businesses.</p>
+      <p class="intro">I spent years in pharmaceutical production and still run a community pharmacy in Cairo. That’s where I learned to listen to the person at the counter, and it’s how I approach software: find the actual problem, fix it properly, and explain it clearly.</p>
+      <ul class="links">
+        <li><a class="primary" href="mailto:ahmed.saad.kader@gmail.com">Email me</a></li>
+        <li><a href="https://www.linkedin.com/in/ahmed-saad-kader/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/AhmedSaadKader" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="where">Cairo, Egypt. Working remotely with a team in Germany since 2024.</p>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="lede">Three products I’ve built or helped build, from a restaurant app for a German startup to a nursery platform designed for Egypt.</p>
+
+      <article class="project">
+        <div>
+          <h3>DineOut</h3>
+          <p class="kind">Restaurant discovery app, DineOut GmbH</p>
+          <span class="status">Day job since 2024</span>
+        </div>
+        <div>
+          <p>A Flutter app that helps people find restaurants near them. I work on it as part of a small remote engineering team in Germany, mostly on location, data and reliability.</p>
+          <ul>
+            <li>Built location-based search and saved locations, and work on location reliability: GPS timeouts, fallbacks and faster startup from a cached position.</li>
+            <li>Implemented deep linking and local data persistence with SQLite.</li>
+            <li>Track down issues across API data, state management, local storage and platform-specific behaviour.</li>
+            <li>Write unit, widget and integration tests, run in CI on GitHub Actions with coverage reporting.</li>
+          </ul>
+          <ul class="stack" aria-label="Technologies">
+            <li>Flutter</li><li>Dart</li><li>Firebase</li><li>SQLite</li><li>GitHub Actions</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>Little Steps</h3>
+          <p class="kind">Nursery management platform for Egypt</p>
+          <span class="status">Live</span>
+        </div>
+        <div>
+          <p>An Arabic-first web app for running a nursery, with separate experiences for managers, teachers and parents. I designed, built and deployed it end to end.</p>
+          <ul>
+            <li>Attendance, admissions, finance and curriculum workflows built around how Egyptian nurseries actually operate.</li>
+            <li>Flutter web front end with a NestJS backend.</li>
+            <li>Grounded in my own market research, including a data pipeline that maps nurseries across all 27 governorates.</li>
+          </ul>
+          <ul class="stack" aria-label="Technologies">
+            <li>Flutter Web</li><li>NestJS</li><li>TypeScript</li><li>Python</li>
+          </ul>
+          <div class="plinks"><a href="https://app.uselittlesteps.com" target="_blank" rel="noopener">Open the live app</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>El7a2ny</h3>
+          <p class="kind">Automotive services platform</p>
+          <span class="status">Four connected apps</span>
+        </div>
+        <div>
+          <p>El7a2ny connects car owners with service providers for booking and scheduling car services. The platform is four apps sharing one backend: customers, service providers, workers and administrators.</p>
+          <ul>
+            <li>Booking and scheduling flows across all four roles, with real-time updates on each request.</li>
+            <li>Online payments through Paymob.</li>
+            <li>API documented with Swagger; deployed on Railway with a custom domain.</li>
+          </ul>
+          <ul class="stack" aria-label="Technologies">
+            <li>Flutter</li><li>NestJS</li><li>PostgreSQL</li><li>Next.js</li><li>Paymob</li>
+          </ul>
+        </div>
+      </article>
+
+      <h3 class="more-title">More on GitHub</h3>
+      <div class="more">
+        <div>
+          <h3><a href="https://github.com/AhmedSaadKader/document_management_system" target="_blank" rel="noopener">Document Management System</a></h3>
+          <p>Workspaces, uploads to AWS S3, sharing permissions, versioning and search. PostgreSQL for auth, MongoDB for documents.</p>
+        </div>
+        <div>
+          <h3><a href="https://github.com/AhmedSaadKader/express-app-generator" target="_blank" rel="noopener">Express app generator</a></h3>
+          <p>Generates boilerplate for a TypeScript Express API with Jest testing and a PostgreSQL database.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="lede">Software is my second career. The first one taught me quality control and how to deal with people.</p>
+      <ol class="timeline">
+        <li>
+          <div class="when">Jun 2024 to now</div>
+          <div>
+            <h3>Software Engineer</h3>
+            <p class="org">DineOut GmbH, Germany (remote)</p>
+            <p>Flutter features, debugging, automated testing and performance work with a small remote team.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Jan 2018 to now</div>
+          <div>
+            <h3>Pharmacy Owner</h3>
+            <p class="org">Community pharmacy, Cairo</p>
+            <p>Run day-to-day operations, answer customer questions and coordinate staff and suppliers.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Sep 2014 to Dec 2017</div>
+          <div>
+            <h3>Production Supervisor</h3>
+            <p class="org">GSK and Novartis, Cairo</p>
+            <p>Supervised pharmaceutical production in a regulated manufacturing environment.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Tools I use</h2>
+      <p class="lede">Mostly Flutter on the front end and TypeScript on the back end.</p>
+      <div class="skills">
+        <div><h3>Apps and frameworks</h3><p>Dart, Flutter, TypeScript, JavaScript, React, Node.js, Express, NestJS</p></div>
+        <div><h3>Data and integrations</h3><p>REST APIs, PostgreSQL, SQLite, MongoDB, Firebase, AWS S3, Paymob</p></div>
+        <div><h3>Engineering practice</h3><p>Debugging, unit and integration testing, CI with GitHub Actions, Git, Provider</p></div>
+        <div><h3>Education</h3><p>ALX Holberton School, Full Stack Software Engineering (2024). German University in Cairo, B.Sc. Pharmacy and Biotechnology (2012).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <h2>Have a product that needs building or a problem that needs solving?</h2>
+      <p>Email is the fastest way to reach me. I work in English and Arabic.</p>
+      <ul class="links">
+        <li><a class="primary" href="mailto:ahmed.saad.kader@gmail.com">ahmed.saad.kader@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/ahmed-saad-kader/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/AhmedSaadKader" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+</main>
+</body>
+</html>
